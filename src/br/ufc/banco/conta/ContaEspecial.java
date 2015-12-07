@@ -1,6 +1,8 @@
 package br.ufc.banco.conta;
 
-public class ContaEspecial extends Conta {
+import java.io.Serializable;
+
+public class ContaEspecial extends Conta implements Serializable {
 
 	private double bonus;
 

@@ -1,6 +1,8 @@
 package br.ufc.banco.conta;
 
-public class ContaPoupanca extends Conta {
+import java.io.Serializable;
+
+public class ContaPoupanca extends Conta implements Serializable{
 
 	public ContaPoupanca(String numero) {
 		super(numero);

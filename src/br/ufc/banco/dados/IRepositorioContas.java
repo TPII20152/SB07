@@ -15,4 +15,6 @@ public interface IRepositorioContas {
 	public ContaAbstrata[] listar();
 
 	public int numeroContas();
+	
+	public void salvar();
 }

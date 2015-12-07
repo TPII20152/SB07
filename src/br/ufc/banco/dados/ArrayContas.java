@@ -1,5 +1,6 @@
 package br.ufc.banco.dados;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,7 +9,7 @@ import br.ufc.banco.conta.ContaAbstrata;
 import br.ufc.banco.dados.excecoes.CEException;
 import br.ufc.banco.dados.excecoes.CIException;
 
-public class ArrayContas implements IRepositorioContas {
+public class ArrayContas implements IRepositorioContas, Serializable {
 
 	private List<ContaAbstrata> contas;
 
@@ -53,5 +54,9 @@ public class ArrayContas implements IRepositorioContas {
 			return contas.get(i);
 		}
 		return null;
+	}
+
+	@Override
+	public void salvar() {
 	}
 }

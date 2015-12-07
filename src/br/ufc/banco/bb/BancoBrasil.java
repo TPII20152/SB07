@@ -35,7 +35,7 @@ public class BancoBrasil {
 		} else {
 			throw new TNRException(new CIException(numConta));
 		}
-
+		this.repositorio.salvar();
 	}
 
 	public void debitar(String numConta, double valor) throws TNRException {
@@ -49,6 +49,7 @@ public class BancoBrasil {
 		} else {
 			throw new TNRException(new CIException(numConta));
 		}
+		this.repositorio.salvar();
 	}
 
 	public double saldo(String numConta) throws TNRException {
@@ -79,7 +80,7 @@ public class BancoBrasil {
 		} else {
 			throw new TNRException(new CIException(numOrigem));
 		}
-
+		this.repositorio.salvar();
 	}
 
 	public void renderJuros(String numConta) throws TNRException {
@@ -93,6 +94,7 @@ public class BancoBrasil {
 		} else {
 			throw new TNRException(new CIException(numConta));
 		}
+		this.repositorio.salvar();
 	}
 
 	public void renderBonus(String numConta) throws TNRException {
@@ -106,6 +108,7 @@ public class BancoBrasil {
 		} else {
 			throw new TNRException(new CIException(numConta));
 		}
+		this.repositorio.salvar();
 	}
 
 	public int numeroContas() {
