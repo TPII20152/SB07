@@ -26,4 +26,12 @@ public abstract class ContaAbstrata {
 	public double obterSaldo() {
 		return saldo;
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this.numero.equals(((ContaAbstrata) obj).obterNumero())) {
+			return true;
+		}
+		return false;
+	}
 }
