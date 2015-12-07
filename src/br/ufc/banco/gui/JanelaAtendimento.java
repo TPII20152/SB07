@@ -25,9 +25,9 @@ import br.ufc.banco.conta.ContaAbstrata;
 import br.ufc.banco.conta.ContaEspecial;
 import br.ufc.banco.conta.ContaImposto;
 import br.ufc.banco.conta.ContaPoupanca;
-import br.ufc.banco.dados.VectorContas;
 import br.ufc.banco.dados.excecoes.CEException;
 import br.ufc.banco.dados.excecoes.CIException;
+import br.ufc.banco.persistencia.BancoDAO;
 
 public class JanelaAtendimento extends JFrame {
 	
@@ -466,6 +466,6 @@ public class JanelaAtendimento extends JFrame {
 	}
 	
 	public static void main(String[] args) {
-		new JanelaAtendimento(new BancoBrasil(new VectorContas()));
+		new JanelaAtendimento(new BancoBrasil(new BancoDAO("banco.ser")));
 	}
 }

@@ -1,8 +1,10 @@
 package br.ufc.banco.conta;
 
+import java.io.Serializable;
+
 import br.ufc.banco.conta.excecoes.SIException;
 
-public class ContaImposto extends ContaAbstrata {
+public class ContaImposto extends ContaAbstrata implements Serializable {
 
 	public ContaImposto(String numero) {
 		super(numero);

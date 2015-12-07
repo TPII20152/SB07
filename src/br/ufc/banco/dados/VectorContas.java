@@ -58,4 +58,8 @@ public class VectorContas implements IRepositorioContas {
 		}
 		return null;
 	}
+
+	@Override
+	public void salvar() {
+	}
 }
