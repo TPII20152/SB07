@@ -11,14 +11,14 @@ import br.ufc.banco.dados.excecoes.CIException;
 
 public class BancoDAO implements IRepositorioContas, Serializable {
 	ArrayContas contas;
-	File arquivo; 
-	
+	File arquivo;
+
 	public BancoDAO(String path) {
 		this.arquivo = new File(path);
-		
-		if(this.arquivo.exists()) {
+
+		if (this.arquivo.exists()) {
 			try {
-				contas = (ArrayContas)Descerializador.descerializar(path);
+				contas = (ArrayContas) Descerializador.descerializar(path);
 			} catch (Exception e) {
 				System.out.println("ERROR: Impossivel abrir o arquivo");
 				e.printStackTrace();
@@ -27,7 +27,7 @@ public class BancoDAO implements IRepositorioContas, Serializable {
 			contas = new ArrayContas();
 		}
 	}
-	
+
 	@Override
 	public void inserir(ContaAbstrata conta) throws CEException {
 		contas.inserir(conta);
@@ -54,7 +54,7 @@ public class BancoDAO implements IRepositorioContas, Serializable {
 	public int numeroContas() {
 		return contas.numeroContas();
 	}
-	
+
 	public void salvar() {
 		try {
 			Serializador.serializar(arquivo.getPath(), contas);
@@ -62,7 +62,7 @@ public class BancoDAO implements IRepositorioContas, Serializable {
 			System.out.println("ERROR: Impossivel salvar arquivo");
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 }

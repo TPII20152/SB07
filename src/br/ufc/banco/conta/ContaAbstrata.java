@@ -4,7 +4,6 @@ import java.io.Serializable;
 
 import br.ufc.banco.conta.excecoes.SIException;
 
-
 public abstract class ContaAbstrata implements Serializable {
 
 	protected String numero;
@@ -28,7 +27,7 @@ public abstract class ContaAbstrata implements Serializable {
 	public double obterSaldo() {
 		return saldo;
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this.numero.equals(((ContaAbstrata) obj).obterNumero())) {

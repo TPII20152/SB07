@@ -17,7 +17,7 @@ public class ContaEspecial extends Conta implements Serializable {
 	}
 
 	public double obterBonus() {
-		return bonus;		
+		return bonus;
 	}
 
 	public void creditar(double valor) {

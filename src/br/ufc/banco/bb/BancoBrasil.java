@@ -62,8 +62,7 @@ public class BancoBrasil {
 
 	}
 
-	public void transferir(String numOrigem, String numDestino, double valor)
-			throws TNRException {
+	public void transferir(String numOrigem, String numDestino, double valor) throws TNRException {
 		ContaAbstrata contaOrigem = this.repositorio.procurar(numOrigem);
 		if (contaOrigem != null) {
 			ContaAbstrata contaDestino = this.repositorio.procurar(numDestino);

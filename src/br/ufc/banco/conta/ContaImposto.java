@@ -16,6 +16,6 @@ public class ContaImposto extends ContaAbstrata implements Serializable {
 			this.saldo = this.saldo - debito;
 		} else {
 			throw new SIException(this.numero, this.saldo);
-		}		
+		}
 	}
 }
